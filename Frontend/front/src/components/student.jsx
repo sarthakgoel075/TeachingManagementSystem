@@ -86,7 +86,7 @@ const formatted = {
 };
 
   const handleDelete = async (stu) => {
-    const resp = await fetch(`http://localhost:5000/api/v1/students?rollno=${stu.roll}`, {
+    const resp = await fetch(`https://teachingmanagementsystem-1.onrender.com/api/v1/students?rollno=${stu.roll}`, {
       method: "DELETE",
       headers: {
         Authorization: `Bearer ${token}`,
