@@ -1,0 +1,358 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #1a1a2e 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  color: #fff;
+}
+
+/* Form Container - Always centered */
+.form {
+  background: rgba(26, 26, 46, 0.9);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Labels */
+label {
+  display: block;
+  margin-bottom: 1rem;
+  color: #e2e8f0;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+/* Input Fields */
+input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-top: 0.25rem;
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+input::placeholder {
+  color: rgba(148, 163, 184, 0.6);
+}
+
+input:focus {
+  outline: none;
+  border-color: #7877c6;
+  box-shadow: 0 0 0 2px rgba(120, 119, 198, 0.2);
+  background: rgba(15, 23, 42, 0.95);
+}
+
+input:hover:not(:focus) {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Form Button - Fixed width, proper sizing */
+.form button {
+  display: block;
+  width: auto;
+  min-width: 120px;
+  max-width: 200px;
+  padding: 0.75rem 1.5rem;
+  margin: 1.5rem auto 0;
+  background: linear-gradient(135deg, #7877c6 0%, #ff77c6 100%);
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(120, 119, 198, 0.4);
+  background: linear-gradient(135deg, #8b89d6 0%, #ff89d6 100%);
+}
+
+.form button:active {
+  transform: translateY(0);
+}
+
+.form button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Student Table Styles */
+/* Table Container */
+table {
+  width: 100%;
+  max-width: 1400px;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  font-size: 16px;
+  transform: scale(1.1);
+}
+
+/* Table Header */
+thead {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+th {
+  padding: 16px 10px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ecf0f1;
+}
+
+th:last-child {
+  border-right: none;
+}
+
+/* Table Body */
+tbody tr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+tbody tr:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+td {
+  padding: 14px 10px;
+  text-align: center;
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  vertical-align: middle;
+  font-size: 15px;
+}
+
+td:last-child {
+  border-right: none;
+}
+
+/* Optimized Column Widths */
+th:nth-child(1), td:nth-child(1) { width: 14%; } /* Student Name */
+th:nth-child(2), td:nth-child(2) { width: 8%; }  /* Roll No */
+th:nth-child(3), td:nth-child(3) { width: 10%; } /* Subject */
+th:nth-child(4), td:nth-child(4) { width: 16%; } /* Contact */
+th:nth-child(5), td:nth-child(5) { width: 8%; }  /* Fees */
+th:nth-child(6), td:nth-child(6) { width: 12%; } /* Batch */
+th:nth-child(7), td:nth-child(7) { width: 32%; } /* Actions */
+
+/* Button Container - Horizontal Layout */
+td:last-child {
+  padding: 12px 8px;
+}
+
+/* Individual Buttons */
+button {
+  display: inline-block;
+  padding: 8px 16px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: capitalize;
+  min-width: 80px;
+  vertical-align: middle;
+}
+
+/* Update Button */
+button:first-of-type,
+.update-btn {
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+}
+
+button:first-of-type:hover,
+.update-btn:hover {
+  background: linear-gradient(135deg, #5dade2, #3498db);
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(52, 152, 219, 0.3);
+}
+
+/* Delete Button */
+button:last-of-type,
+.delete-btn {
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+  color: white;
+}
+
+button:last-of-type:hover,
+.delete-btn:hover {
+  background: linear-gradient(135deg, #ec7063, #e74c3c);
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(231, 76, 60, 0.3);
+}
+
+/* Add Button */
+.add-student-btn {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, #9b59b6, #8e44ad);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(155, 89, 182, 0.4);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(1.1);
+}
+
+.add-student-btn:hover {
+  background: linear-gradient(135deg, #af7ac5, #9b59b6);
+  transform: translateY(-2px) scale(1.1);
+  box-shadow: 0 8px 25px rgba(155, 89, 182, 0.5);
+}
+
+/* Mobile responsive */
+@media (max-width: 480px) {
+  .form {
+    padding: 1.5rem;
+    margin: 10px;
+  }
+  
+  input {
+    padding: 0.625rem 0.875rem;
+  }
+  
+  .form button {
+    width: 100%;
+    max-width: none;
+    padding: 0.75rem;
+  }
+  
+  table {
+    transform: scale(0.9);
+    font-size: 14px;
+  }
+  
+  th, td {
+    padding: 10px 6px;
+  }
+  
+  button {
+    padding: 6px 12px;
+    font-size: 11px;
+    min-width: 60px;
+    margin: 0 2px;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  table {
+    font-size: 15px;
+    transform: scale(1.05);
+  }
+  
+  th, td {
+    padding: 12px 8px;
+  }
+  
+  button {
+    padding: 6px 12px;
+    font-size: 12px;
+    min-width: 70px;
+    margin: 0 3px;
+  }
+}
+
+@media (max-width: 768px) {
+  table {
+    font-size: 14px;
+    transform: scale(1.0);
+  }
+  
+  th, td {
+    padding: 10px 6px;
+  }
+  
+  /* Stack buttons vertically on small screens */
+  td:last-child {
+    line-height: 1.2;
+  }
+  
+  button {
+    display: block;
+    margin: 3px auto;
+    width: 85%;
+  }
+  
+  /* Adjust column widths for mobile */
+  th:nth-child(7), td:nth-child(7) { width: 25%; }
+}
+
+@media (max-width: 480px) {
+  /* Hide contact column on very small screens */
+  th:nth-child(4), td:nth-child(4) { 
+    display: none;
+  }
+  
+  th:nth-child(1), td:nth-child(1) { width: 18%; }
+  th:nth-child(7), td:nth-child(7) { width: 30%; }
+}
+.plus{
+  margin-left: 79%;
+}
+.toggle{
+  top:10px;
+  right:10px;
+  position: absolute;
+  }
+  .icon{
+    height: 30px;
+    width: 30px;
+    margin: 5px;
+    border-radius: 50%;
+  }
+  .add{
+      height: 40px;
+    width: 40px;
+    margin-left: 85%;
+  }

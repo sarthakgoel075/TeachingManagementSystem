@@ -1,0 +1,30 @@
+table {
+  width: 80%;
+  border-collapse: collapse;
+  margin-left: 10%;
+}
+.row {
+  background-color: rgb(38, 95, 146);
+  height: 40px;
+  color: white;
+}
+
+td {
+  padding: 10px;
+  border: 1px solid white;
+  max-width: 100%;
+  text-align: center;
+}
+
+.heading{
+    color: #73bae7;
+    margin-left: 45%;
+    margin-top: 5%;
+    font-size: 40px;
+}
+
+.head{
+  color: #7792a2;
+  font-size: 15px;
+  padding: 10px;
+}
