@@ -10,7 +10,7 @@ const token = localStorage.getItem("token");
 
   const fetchData = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/v1/students", {
+      const response = await fetch("https://teachingmanagementsystem-1.onrender.com/api/v1/students", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -37,7 +37,7 @@ const handleAddStudent = async (newStudent) => {
     batch: [newStudent.batch],     
   };
 
-  const res = await fetch("http://localhost:5000/api/v1/students", {
+  const res = await fetch("https://teachingmanagementsystem-1.onrender.com/api/v1/students", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -69,7 +69,7 @@ const formatted = {
 };
 
 
-  const res = await fetch("http://localhost:5000/api/v1/students", {
+  const res = await fetch("https://teachingmanagementsystem-1.onrender.com/api/v1/students", {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json",
